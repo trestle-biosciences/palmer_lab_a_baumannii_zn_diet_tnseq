@@ -27,8 +27,16 @@ The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool
 
 <!-- TODO nf-core: Fill in short bullet-pointed list of the default steps in the pipeline -->
 
-1. Read QC ([`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
-2. Present QC for raw reads ([`MultiQC`](http://multiqc.info/))
+1. Demultiplex with Cutadapt 
+2. View sample of reads from fastq files with SEQTK
+3. Read QC ([`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
+4. Trim reads with Cutadapt
+5. View sample of reads from trimmed fastq files with SEQTK
+6. Align reads to reference using Bowtie
+7. Sort and index bam files with Samtools
+8. Use custom python scripts (in bin folder) to prepare files for analysis in Transit
+9. Analyze differential fitness with Transit Zinb model
+10. Generate4 Multiqc reports with Multiqc.
 
 ## Quick Start
 
@@ -42,7 +50,7 @@ The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool
    <!-- TODO nf-core: Update the example "typical command" below used to run the pipeline -->
 
    ```console
-   sudo nextflow run main.nf  -profile trestle -work-dir s3://lp-2022-tn-seq/lp-diet/work/combined --outdir s3://lp-2022-tn-seq/lp-diet/results/combined/ -c tnseq_diet_combined.config -resume 
+   nextflow run main.nf  -profile trestle -work-dir s3://lp-2022-tn-seq/lp-diet/work/combined --outdir s3://lp-2022-tn-seq/lp-diet/results/combined/ -c tnseq_diet_combined.config -resume 
    ```
 
    Note that some form of configuration will be needed so that Nextflow knows how to fetch the required software. This is usually done in the form of a config profile (`YOURPROFILE` in the example command above). You can chain multiple config profiles in a comma-separated string.
