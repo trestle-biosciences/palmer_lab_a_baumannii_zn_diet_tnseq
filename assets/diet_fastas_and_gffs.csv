@@ -1,0 +1,5 @@
+name,fasta,gff
+chrom,s3://lp-2022-tn-seq/lp-diet/reference/acinetobacter_baumannii_17978UN_chromosome.fasta,s3://lp-2022-tn-seq/lp-diet/reference/acinetobacter_baumannii_17978UN_chrom.gff
+pab1,s3://lp-2022-tn-seq/lp-diet/reference/acinetobacter_baumannii_17978UN_pab1.fasta,s3://lp-2022-tn-seq/lp-diet/reference/acinetobacter_baumannii_17978UN_pab1.gff3
+pab2,s3://lp-2022-tn-seq/lp-diet/reference/acinetobacter_baumannii_17978UN_pab2.fasta,s3://lp-2022-tn-seq/lp-diet/reference/acinetobacter_baumannii_17978UN_pab2.gff3
+pab3,s3://lp-2022-tn-seq/lp-diet/reference/acinetobacter_baumannii_17978UN_pab3.fasta,s3://lp-2022-tn-seq/lp-diet/reference/acinetobacter_baumannii_17978UN_pab3.gff3

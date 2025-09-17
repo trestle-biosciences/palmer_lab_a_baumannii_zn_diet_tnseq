@@ -1,0 +1,6 @@
+﻿id,design_id,ref_condition,samples
+test1,in_vitro_lb_to_input,input,A3-C3-G2-E2-F2
+test2,in_vivo_low_zn_wt_to_input,input,A5-G4-H4-E2-F2
+test3,in_vitro_lb_cp_to_input,input,B3-D3-H2-E2-F2
+test4,in_vivo_ctrl_zn_wt_to_input,input,B5-C5-D5-E2-F2
+test5,in_vivo_low_zn_wt_to_in_vivo_ctrl_zn_wt,in_vivo_low_zn_wt,A5-G4-H4-B5-C5-D5
